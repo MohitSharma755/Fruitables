@@ -51,7 +51,7 @@ include ("config.php");
                         $output .= "
                          
         <div class='col-lg-6 col-sm-3 col-md-6 col-xl-3 p-2'>
-            <img src='./productimg/$photo' class='img-fluid rounded-top'>
+            <img src='./productimg/$photo' class=' rounded-top'style='height:183px;width:99.99%'>
             <div class=' border border-warning ' style='border-top: none !important;'>
                 <h3 class='text-center p-2 h-color'> $name</h3>
                 <p class='p-3'>$description
