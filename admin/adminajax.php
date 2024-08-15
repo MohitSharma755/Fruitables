@@ -22,6 +22,12 @@ if (isset($_SESSION['login_type']) && ($_SESSION['mobilenum'])) {
     $logintype = $_SESSION['login_type'];
 
 }
+elseif (!isset($_SESSION['login_type']) && ($_SESSION['mobilenum'])) {
+    header("Location: ../seller_login.php");
+
+} else {
+    echo "<script>window.location.href='../seller_login.php'</script>";
+}
 $data = $conn->query("SELECT * FROM userdata WHERE `mobilese`='$mobile' AND `login_type`='$logintype'");
 if (mysqli_num_rows($data) > 0) {
     $result = mysqli_fetch_assoc($data);
